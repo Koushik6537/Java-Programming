@@ -1,0 +1,112 @@
+/*This is a simple calculator that is able to perform basic arithmetic operations*/
+
+import java.util.*;
+
+public class Calculator {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int exit;
+        System.out.println("!!!--------Simple Calculator--------!!!");
+        while (true) { 
+            System.out.println("Choices of operation available are as follows");
+            System.out.println("1-Addition");
+            System.out.println("2-Subtraction");
+            System.out.println("3-Multiplication");
+            System.out.println("4-Division");
+            System.out.println("5-Modulus");
+            System.out.println("6-Exit from Calculator");
+            System.out.println("Enter your choice:");
+            int choice = sc.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Enter first number:");
+                    int add1 = sc.nextInt();
+                    System.out.println("Enter second number:");
+                    int add2 = sc.nextInt();
+                    System.out.println("Sum of the two numbers is: " + (add1+add2));
+                    System.out.println();
+					System.out.println("Do you want to exit from the calculator?(1-Yes,2-No): ");
+					exit = sc.nextInt();
+					if(exit==1){
+						System.out.println("Exiting from the Calculator,Thank You......");
+						System.exit(0);
+						break;
+					} else {
+						continue;
+					}
+                case 2:
+                    System.out.println("Enter first number:");
+                    int sub1 = sc.nextInt();
+                    System.out.println("Enter second number:");
+                    int sub2 = sc.nextInt();
+                    System.out.println("Difference of the two numbers is: " + (sub1-sub2)); 
+                    System.out.println();
+					System.out.println("Do you want to exit from the calculator?(1-Yes,2-No): ");
+					exit = sc.nextInt();
+					if(exit==1){
+						System.out.println("Exiting from the Calculator,Thank You......");
+						System.exit(0);
+						break;
+					} else {
+						continue;
+					}
+                case 3:
+                    System.out.println("Enter first number:");
+                    int mul1 = sc.nextInt();
+                    System.out.println("Enter second number:");
+                    int mul2 = sc.nextInt();
+                    System.out.println("Product of the two numbers is: " + (mul1*mul2)); 
+                    System.out.println();
+					System.out.println("Do you want to exit from the calculator?(1-Yes,2-No): ");
+					exit = sc.nextInt();
+					if(exit==1){
+						System.out.println("Exiting from the Calculator,Thank You......");
+						System.exit(0);
+						break;
+					} else {
+						continue;
+					}
+                case 4:
+                    System.out.println("Enter first number:");
+                    int div1 = sc.nextInt();
+                    System.out.println("Enter second number:");
+                    int div2 = sc.nextInt();
+                    System.out.println("Result is: " + (div1/div2));
+                    System.out.println();
+					System.out.println("Do you want to exit from the calculator?(1-Yes,2-No): ");
+					exit = sc.nextInt();
+					if(exit==1){
+						System.out.println("Exiting from the Calculator,Thank You......");
+						System.exit(0);
+						break;
+					} else {
+						continue;
+					}
+                case 5:
+                    System.out.println("Enter first number:");
+                    int mod1 = sc.nextInt();
+                    System.out.println("Enter second number:");
+                    int mod2 = sc.nextInt();
+                    System.out.println("Modulus is: " + (mod1%mod2));
+                    System.out.println();
+					System.out.println("Do you want to exit from the calculator?(1-Yes,2-No): ");
+					exit = sc.nextInt();
+					if(exit==1){
+						System.out.println("Exiting from the Calculator,Thank You......");
+						System.exit(0);
+						break;
+					} else {
+						continue;
+					}
+                case 6:
+                    System.out.println("Exiting from the Calculator..........");
+                    sc.close();
+                    return;
+                default:
+					System.out.println("Invalid choice. Please enter (1/2/3/4/5/6)");
+					System.out.println();
+					break;
+            }
+        }
+    }
+}
